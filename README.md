@@ -23,11 +23,13 @@ https://thepihut.com/products/raspberry-pi-pico-w
 
 ![IMG_20221230_154903](https://user-images.githubusercontent.com/46349796/210091863-a49255a8-1609-4172-b5f1-8d496d878f62.jpg)
 
-# hello
+# Desktop gadgets
 
 ![IMG_20221230_163836](https://user-images.githubusercontent.com/46349796/210109617-f4d2fbfb-d31d-4e99-b65f-1aeea5504bac.jpg)
 
-more
+# Cycles through tasks / events
 
-more
+![P1010467](https://user-images.githubusercontent.com/46349796/210110089-3044b774-faa8-4d8a-a4c2-c613efe2f0e8.JPG)
+
+![P1010470](https://user-images.githubusercontent.com/46349796/210110097-9f17ad86-5f05-41a5-8962-8608bd8489b6.JPG)
 
