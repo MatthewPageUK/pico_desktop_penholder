@@ -1,4 +1,4 @@
-# pico_desktop_penholder
+# Raspberry Pi Pico Desktop Pen holder with LCD Calendar
 
 ![P1010462](https://user-images.githubusercontent.com/46349796/210109631-aa41eb52-5108-48c4-a093-3cc7441347fe.jpg)
 
@@ -28,7 +28,6 @@ https://thepihut.com/products/raspberry-pi-pico-w
 ![IMG_20221230_163836](https://user-images.githubusercontent.com/46349796/210109617-f4d2fbfb-d31d-4e99-b65f-1aeea5504bac.jpg)
 
 more
-
 
 more
 
