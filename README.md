@@ -2,7 +2,11 @@
 
 ![P1010462](https://user-images.githubusercontent.com/46349796/210109631-aa41eb52-5108-48c4-a093-3cc7441347fe.jpg)
 
-A small pen holder with embedded Raspberry Pi Pico W and square 1.3" LCD display.
+A small pen holder with embedded Raspberry Pi Pico W and square 1.3" LCD display. Shows todays date and cycles through some hard-coded tasks. 
+
+* Todo - connect to a Google calendar and show todays events.
+* Todo - A switch or sensor to change the mode when the pen is removed
+* Todo - Some buttons or touch controls
 
 ## Square LCD 1.3" SPI
 https://thepihut.com/products/1-3-spi-colour-round-lcd-240x240-breakout
@@ -42,6 +46,7 @@ Had a few issues with the flat bridging below the pen, first layer missed a bit 
 
 ![image](https://user-images.githubusercontent.com/46349796/210110403-76e80329-0217-42b2-8141-ad15a88b73f5.png)
 
+![image](https://user-images.githubusercontent.com/46349796/210110635-9914e4fd-ac1d-4e32-a97a-8a251d19d1ab.png)
 
 
 
