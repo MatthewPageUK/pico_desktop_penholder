@@ -9,7 +9,7 @@ A small pen holder with embedded Raspberry Pi Pico W and square 1.3" LCD display
 * Todo - Some buttons or touch controls
 
 ## Square LCD 1.3" SPI
-https://thepihut.com/products/1-54-spi-colour-square-lcd-240x240-breakout
+https://thepihut.com/products/1-3-spi-colour-lcd-240x240-breakout
 
 ## Pico W
 https://thepihut.com/products/raspberry-pi-pico-w
