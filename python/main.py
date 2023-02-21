@@ -55,6 +55,29 @@ MONTH_FONT_SCALE = 2.5
 MONTH_YPOS = 195
 MONTH_COLOUR = BLACK
 
+# function to read ics file and exytact events
+def read_ics_file(filename):
+    # read
+    with open(filename, 'r') as f:
+        lines = f.readlines()
+    # parse
+    events = []
+    event = {}
+    for line in lines:
+        if line.startswith('BEGIN:VEVENT'):
+            event = {}
+        elif line.startswith('END:VEVENT'):
+            events.append(event)
+        elif line.startswith('SUMMARY'):
+            event['summary'] = line.split(':')[1].strip()
+        elif line.startswith('DTSTART'):
+            event['start'] = line.split(':')[1].strip()
+        elif line.startswith('DTEND'):
+            event['end'] = line.split(':')[1].strip()
+    return events
+
+
+
 # Show a notification on the display
 def notification(text, colour, delay = DEFAULT_NOTIFICATION_DELAY, background = BG):
     display.set_pen(background)
@@ -73,7 +96,7 @@ def task(text1, text2, colour, delay = DEFAULT_NOTIFICATION_DELAY, background = 
     display.text(text1, 20, 20, 200, 4)
     display.set_font('bitmap8')
     display.text(text2, 20, 60, 200, 3)
-    
+
     display.update()
     utime.sleep(delay)
 
@@ -107,13 +130,13 @@ setNtpTime(WIFI_SSID, WIFI_PASSWORD)
 
 # Main Loop
 while True:
-    
+
     task('8:30am', 'Take the dog for a walk', GREEN, 5)
     task('10:30am', 'Important business meeting with Bob and Alice, don\'t tell Charlie', PURPLE, 5)
 
     # The date now
     date = utime.localtime()
-    
+
     # Get the day and month
     weekdayNumber = date[6]
     day = date[2]
@@ -132,7 +155,7 @@ while True:
     display.set_pen(DAY_COLOUR)
     xpos = int((WIDTH - display.measure_text(dayName, DAY_FONT_SCALE)) / 2)
     display.text(dayName, xpos, DAY_YPOS, 0, DAY_FONT_SCALE)
-    
+
     # Draw the date
     display.set_font(DATE_FONT)
     display.set_pen(DATE_COLOUR)
@@ -146,14 +169,14 @@ while True:
     display.text(text, xpos - 1, DATE_YPOS - 1, 0, DATE_FONT_SCALE)
     display.text(text, xpos + 1, DATE_YPOS - 1, 0, DATE_FONT_SCALE)
     display.text(text, xpos + 1, DATE_YPOS + 1, 0, DATE_FONT_SCALE)
-    display.text(text, xpos - 1, DATE_YPOS + 1, 0, DATE_FONT_SCALE)  
-    
+    display.text(text, xpos - 1, DATE_YPOS + 1, 0, DATE_FONT_SCALE)
+
     # Draw the month name
     display.set_font(MONTH_FONT)
     display.set_pen(MONTH_COLOUR)
     xpos = int((WIDTH - display.measure_text(monthName, MONTH_FONT_SCALE)) / 2)
     display.text(monthName, xpos, MONTH_YPOS, 0, MONTH_FONT_SCALE)
-    
+
     # Update the display
     display.update()
 
